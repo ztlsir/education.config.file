@@ -1,0 +1,26 @@
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:808/oauth/token
+      user-authorization-uri: http://localhost:808/oauth/authorize
+      client-id: zuul
+      client-secret: zuul_secret
+      grant-type: client_credentials,password
+      scope: all
+    resource:
+      loadBalanced: true
+      token-info-uri: http://localhost:808/oauth/check_token
+      user-info-uri: http://oauth2/users/current
+      prefer-token-info: true
+
+zuul:
+  routes:
+    oauth2-login:
+      path: /login/**
+      url: http://localhost:808/login
+      customSensitiveHeaders: true
+    oauth2-authorize:
+      path: /oauth/**
+      url: http://localhost:808/oauth/
+      customSensitiveHeaders: true
+  add-host-header: true
