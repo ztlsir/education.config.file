@@ -15,14 +15,12 @@ security:
 
 zuul:
   routes:
+    oauth2-login:
+      path: /login/**
+      url: http://localhost:808/login
+      customSensitiveHeaders: true
     oauth2-authorize:
       path: /oauth/**
       url: http://localhost:808/oauth/
       customSensitiveHeaders: true
   add-host-header: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
