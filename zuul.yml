@@ -24,9 +24,3 @@ zuul:
       url: http://localhost:808/oauth/
       customSensitiveHeaders: true
   add-host-header: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
