@@ -1,1 +1,7 @@
 config-test: this is default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
