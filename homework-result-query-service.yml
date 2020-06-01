@@ -12,3 +12,7 @@ spring:
     port: 5672
     username: guest
     password: guest
+
+education:
+  rabbit:
+    receiveQ: education_homework_result_created
