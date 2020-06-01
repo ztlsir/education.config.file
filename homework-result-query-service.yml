@@ -7,6 +7,13 @@ management:
         include: "*"
 
 spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  data-source:
+    url: jdbc:mysql://localhost:3308/homework_result_query
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
   rabbitmq:
     host: localhost
     port: 5672
