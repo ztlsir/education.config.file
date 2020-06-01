@@ -22,4 +22,5 @@ spring:
 
 education:
   rabbit:
+    publishX: education_homework_result_event
     receiveQ: education_homework_result_created
